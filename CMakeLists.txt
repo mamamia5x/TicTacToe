@@ -9,5 +9,4 @@ add_executable(TicTacToe main.cpp
         View.h
         View.cpp
         Board.h
-        Board.cpp
         Board.cpp)
