@@ -11,6 +11,7 @@ Controller::Controller(Board* board) {
 bool Controller::updateBoard(const char input) {
   if (!isdigit(input)) return false;
   const int number = input - '0';
+  if (number == 0) return false;
   if (board->getValue(number) == 0) {
     board -> setValue(number, playerTurn);
     changeTurn();
