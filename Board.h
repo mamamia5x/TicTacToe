@@ -11,11 +11,11 @@ class Board {
 public:
     void calcWin(int piece);
     int (*getBoard())[3];
-    int getValue(int cell);
-    int getWinner();
+    int getValue(int cell) const;
+    int getWinner() const;
     bool setValue(int cell, int value);
 private:
-    int board[3][3];
+    int board[3][3] = {};
     int win = 0;
 };
 

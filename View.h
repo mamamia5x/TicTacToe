@@ -8,14 +8,14 @@
 
 class View {
 public:
-    View(std::string symbol1, std::string symbol2);
+    View(std::string& symbol1, std::string& symbol2);
     char getInput();
-    void show(int (*board)[3], int turn);
-    void showWinner(int winner);
+    void show(const int (*board)[3], int turn) const;
+    void showWinner(int winner) const;
     void showHelp();
 private:
-    std::string symbol1;
-    std::string symbol2;
+    std::string* symbol1;
+    std::string* symbol2;
 };
 
 

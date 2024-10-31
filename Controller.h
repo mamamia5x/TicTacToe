@@ -11,15 +11,13 @@
 
 class Controller {
 public:
-    Controller(Board* board, std::string symbol1, std::string symbol2);
+    Controller(Board* board);
     bool updateBoard(char input);
-    bool checkWin();
-    int getTurn();
+    bool checkWin() const;
+    int getTurn() const;
 private:
     Board* board;
-    int playerTurn;
-    std::string symbol1;
-    std::string symbol2;
+    int playerTurn = 1;
     void changeTurn();
 };
 

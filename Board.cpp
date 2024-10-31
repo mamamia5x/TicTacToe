@@ -10,11 +10,11 @@ int (*Board::getBoard())[3] {
   return board;
 }
 
-int Board::getValue(int cell) {
+int Board::getValue(const int cell) const {
   return board[getI(cell)][getJ(cell)];
 }
 
-bool Board::setValue(int cell, int value) {
+bool Board::setValue(const int cell, const int value) {
   if (getValue(cell) == 0) {
     board[getI(cell)][getJ(cell)] = value;
     return true;
@@ -22,20 +22,20 @@ bool Board::setValue(int cell, int value) {
   return false;
 }
 
-void Board::calcWin(int piece) {
+void Board::calcWin(const int piece) {
   win = piece;
 }
 
-int Board::getWinner() {
+int Board::getWinner() const {
   return win;
 }
 
 
 
-int getI(int cell) {
+int getI(const int cell) {
   return (cell - 1) / 3;
 }
 
-int getJ(int cell) {
+int getJ(const int cell) {
   return (cell - 1) % 3;
 }

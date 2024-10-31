@@ -7,7 +7,7 @@ int main() {
     int turns = 0;
     View view = View(symbol1, symbol2);
     Board board = Board();
-    Controller controller = Controller(&board, symbol1, symbol2);
+    Controller controller = Controller(&board);
 
     view.showHelp();
     bool gameRunning = true;
