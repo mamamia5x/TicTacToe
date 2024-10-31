@@ -22,6 +22,16 @@ bool Board::setValue(int cell, int value) {
   return false;
 }
 
+void Board::calcWin(int piece) {
+  win = piece;
+}
+
+int Board::getWinner() {
+  return win;
+}
+
+
+
 int getI(int cell) {
   return (cell - 1) / 3;
 }

@@ -6,14 +6,12 @@
 #define CONTROLLER_H
 #include <string>
 #include "Board.h"
-#include "View.h"
 #include "Controller.h"
 
 
 class Controller {
 public:
     Controller(Board* board, std::string symbol1, std::string symbol2);
-    // bool startGame();
     bool updateBoard(char input);
     bool checkWin();
     int getTurn();

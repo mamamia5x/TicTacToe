@@ -54,6 +54,7 @@ bool Controller::checkWin() {
       int second = board->getValue(getSecond(i));
       int third = board->getValue(getThird(i));
       if (first == second && second == third) {
+        board->calcWin(first);
         return true;
       }
     }

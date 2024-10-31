@@ -9,14 +9,14 @@
 
 class Board {
 public:
-    bool playMove(int row, int col, int symbol);
-    bool calcWin();
-
+    void calcWin(int piece);
     int (*getBoard())[3];
     int getValue(int cell);
+    int getWinner();
     bool setValue(int cell, int value);
 private:
     int board[3][3];
+    int win = 0;
 };
 
 
